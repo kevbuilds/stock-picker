@@ -1,111 +1,57 @@
-# 📈 AI Stock Picker# StockPicker Crew
+# 📈 AI Stock Picker
 
+An intelligent multi-agent system that discovers trending companies, conducts financial research, and makes investment recommendations. Built with CrewAI, this project showcases advanced AI orchestration with persistent memory and real-time notifications.
 
+## 🌟 Features
 
-An intelligent multi-agent system that discovers trending companies, conducts financial research, and makes investment recommendations. Built with CrewAI, this project showcases advanced AI orchestration with persistent memory and real-time notifications.Welcome to the StockPicker Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
-
-
-
-## 🌟 Features## Installation
-
-
-
-- **Multi-Agent Collaboration**: Three specialized AI agents work together:Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
-
-  - 🔍 **Trending Company Finder**: Discovers companies making headlines
-
-  - 📊 **Financial Researcher**: Analyzes market position and growth potentialFirst, if you haven't already, install uv:
-
+- **Multi-Agent Collaboration**: Three specialized AI agents work together:
+  - �� **Trending Company Finder**: Discovers companies making headlines
+  - 📊 **Financial Researcher**: Analyzes market position and growth potential
   - 💰 **Investment Advisor**: Makes data-driven investment recommendations
-
-  ```bash
-
-- **Persistent Memory System**: Agents remember past interactions using:pip install uv
-
-  - Long-term memory (SQLite storage)```
-
+  
+- **Persistent Memory System**: Agents remember past interactions using:
+  - Long-term memory (SQLite storage)
   - Short-term memory for context
-
-  - Entity memory for tracking companiesNext, navigate to your project directory and install the dependencies:
-
+  - Entity memory for tracking companies
   - RAG storage for semantic search
 
-(Optional) Lock the dependencies and install them by using the CLI command:
+- **Real-time Notifications**: Get instant push notifications via Pushover when investment recommendations are ready
 
-- **Real-time Notifications**: Get instant push notifications via Pushover when investment recommendations are ready```bash
-
-crewai install
-
-- **Structured Data Output**: Type-safe outputs using Pydantic models with JSON exports```
-
-### Customizing
+- **Structured Data Output**: Type-safe outputs using Pydantic models with JSON exports
 
 - **Automated Research**: Web search integration for current market intelligence
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
 ## 🏗️ Architecture
 
-- Modify `src/stock_picker/config/agents.yaml` to define your agents
-
-```- Modify `src/stock_picker/config/tasks.yaml` to define your tasks
-
-stock_picker/- Modify `src/stock_picker/crew.py` to add your own logic, tools and specific args
-
-├── config/- Modify `src/stock_picker/main.py` to add custom inputs for your agents and tasks
-
-│   ├── agents.yaml        # Agent definitions (roles, goals, backstories)
-
-│   └── tasks.yaml         # Task definitions and workflows## Running the Project
-
-├── tools/
-
-│   └── push_tool.py       # Pushover notification integrationTo kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-├── memory/                # Persistent agent memory (auto-generated)
-
-├── output/                # Generated reports and decisions```bash
-
-│   ├── decision.md$ crewai run
-
-│   ├── research_report.json```
-
-│   └── trending_companies.json
-
-└── crew.py                # Multi-agent orchestrationThis command initializes the stock_picker Crew, assembling the agents and assigning them tasks as defined in your configuration.
-
 ```
-
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+stock_picker/
+├── config/
+│   ├── agents.yaml        # Agent definitions (roles, goals, backstories)
+│   └── tasks.yaml         # Task definitions and workflows
+├── tools/
+│   └── push_tool.py       # Pushover notification integration
+├── memory/                # Persistent agent memory (auto-generated)
+├── output/                # Generated reports and decisions
+│   ├── decision.md
+│   ├── research_report.json
+│   └── trending_companies.json
+└── crew.py                # Multi-agent orchestration
+```
 
 ## 🚀 Quick Start
 
-## Understanding Your Crew
-
 ### Prerequisites
 
-The stock_picker Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
 - Python 3.10 - 3.12
-
-- OpenAI API key## Support
-
+- OpenAI API key
 - Serper API key (for web search)
+- Pushover account (optional, for notifications)
 
-- Pushover account (optional, for notifications)For support, questions, or feedback regarding the StockPicker Crew or crewAI.
+### Installation
 
-- Visit our [documentation](https://docs.crewai.com)
-
-### Installation- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-
-1. **Clone the repository**- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
+1. **Clone the repository**
 ```bash
-
-git clone https://github.com/kevbuilds/stock-picker.gitLet's create wonders together with the power and simplicity of crewAI.
-
+git clone https://github.com/kevbuilds/stock-picker.git
 cd stock-picker
 ```
 
